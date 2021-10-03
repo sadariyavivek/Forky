@@ -13,9 +13,13 @@ class MainTabbarVC: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupComponent()
     }
     
 
+    private func setupComponent() {
+        self.delegate = self
+    }
     /*
     // MARK: - Navigation
 
@@ -27,3 +31,21 @@ class MainTabbarVC: UITabBarController {
     */
 
 }
+
+extension MainTabbarVC: UITabBarControllerDelegate {
+//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+//        if let items = tabBar.items {
+//            for (index, item) in items.enumerated() {
+//                if index == selectedIndex {
+//                    item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
+//                    item.image = UIImage(named: "home")
+//                    item.selectedImage = UIImage(named: "home")
+//                } else {
+//                    item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: .normal)
+//                    item.image = UIImage(named: "home")
+//                }
+//            }
+//        }
+//    }
+}
+
