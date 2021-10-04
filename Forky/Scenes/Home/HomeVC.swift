@@ -23,13 +23,17 @@ class HomeVC: UIViewController {
                   {
                       print("== \(names)")
                   }
-              }
-    
-//        btnRecent.titleLabel?.font = UIFont(name: "Inter-SemiBold", size: 14)
-//        btnFollowing.titleLabel?.font = UIFont(name: "Inter-SemiBold", size: 14)
+        }
+        setComponent()
     }
     
 
+    private func setComponent() {
+        //tableView.register(DefiYieldDetailHeader.nib, forHeaderFooterViewReuseIdentifier: DefiYieldDetailHeader.identifier)
+        tableView.register(cellListTypeHome.nib, forCellReuseIdentifier: cellListTypeHome.identifier)
+        tableView.register(cellPost.nib, forCellReuseIdentifier: cellPost.identifier)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -20,6 +20,11 @@
 		D001B24B270A06D3002BB9D2 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001B24A270A06D3002BB9D2 /* HomeTableView.swift */; };
 		D001B24F270A09E4002BB9D2 /* cellListTypeHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001B24D270A09E4002BB9D2 /* cellListTypeHome.swift */; };
 		D001B250270A09E4002BB9D2 /* cellListTypeHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = D001B24E270A09E4002BB9D2 /* cellListTypeHome.xib */; };
+		D04F52C2270B30F200995194 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F52C1270B30F200995194 /* UITableViewCell+Extension.swift */; };
+		D04F52C5270B3C3F00995194 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F52C4270B3C3F00995194 /* UIColor+Extension.swift */; };
+		D08B4141270B403200709FAC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B4140270B403200709FAC /* UIView+Extension.swift */; };
+		D0B57CFC270B43DD006EEA38 /* cellPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B57CFA270B43DD006EEA38 /* cellPost.swift */; };
+		D0B57CFD270B43DD006EEA38 /* cellPost.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B57CFB270B43DD006EEA38 /* cellPost.xib */; };
 		D0FEA03226EB9B6E00EA2A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FEA03126EB9B6E00EA2A33 /* AppDelegate.swift */; };
 		D0FEA03426EB9B6E00EA2A33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FEA03326EB9B6E00EA2A33 /* SceneDelegate.swift */; };
 		D0FEA03626EB9B6E00EA2A33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FEA03526EB9B6E00EA2A33 /* ViewController.swift */; };
@@ -62,6 +67,11 @@
 		D001B24A270A06D3002BB9D2 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		D001B24D270A09E4002BB9D2 /* cellListTypeHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellListTypeHome.swift; sourceTree = "<group>"; };
 		D001B24E270A09E4002BB9D2 /* cellListTypeHome.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellListTypeHome.xib; sourceTree = "<group>"; };
+		D04F52C1270B30F200995194 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		D04F52C4270B3C3F00995194 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D08B4140270B403200709FAC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		D0B57CFA270B43DD006EEA38 /* cellPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellPost.swift; sourceTree = "<group>"; };
+		D0B57CFB270B43DD006EEA38 /* cellPost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellPost.xib; sourceTree = "<group>"; };
 		D0FEA02E26EB9B6E00EA2A33 /* Forky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FEA03126EB9B6E00EA2A33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0FEA03326EB9B6E00EA2A33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,8 +143,28 @@
 			children = (
 				D001B24D270A09E4002BB9D2 /* cellListTypeHome.swift */,
 				D001B24E270A09E4002BB9D2 /* cellListTypeHome.xib */,
+				D0B57CFA270B43DD006EEA38 /* cellPost.swift */,
+				D0B57CFB270B43DD006EEA38 /* cellPost.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D04F52BF270B30C300995194 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D04F52C0270B30CE00995194 /* Extension */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D04F52C0270B30CE00995194 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D04F52C1270B30F200995194 /* UITableViewCell+Extension.swift */,
+				D04F52C4270B3C3F00995194 /* UIColor+Extension.swift */,
+				D08B4140270B403200709FAC /* UIView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D0FEA02526EB9B6E00EA2A33 = {
@@ -160,6 +190,7 @@
 		D0FEA03026EB9B6E00EA2A33 /* Forky */ = {
 			isa = PBXGroup;
 			children = (
+				D04F52BF270B30C300995194 /* Helper */,
 				D001B2302709FFFD002BB9D2 /* Resources */,
 				D0FEA0A926EB9BB300EA2A33 /* Scenes */,
 				D0FEA03126EB9B6E00EA2A33 /* AppDelegate.swift */,
@@ -204,8 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				D001B244270A051E002BB9D2 /* HomeVC.swift */,
-				D001B24C270A09AC002BB9D2 /* Views */,
 				D001B24A270A06D3002BB9D2 /* HomeTableView.swift */,
+				D001B24C270A09AC002BB9D2 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -324,6 +355,7 @@
 				D001B23B270A00AC002BB9D2 /* Inter-Thin.ttf in Resources */,
 				D001B23C270A00AC002BB9D2 /* Inter-Bold.ttf in Resources */,
 				D0FEA03E26EB9B6F00EA2A33 /* LaunchScreen.storyboard in Resources */,
+				D0B57CFD270B43DD006EEA38 /* cellPost.xib in Resources */,
 				D0FEA03B26EB9B6F00EA2A33 /* Assets.xcassets in Resources */,
 				D0FEA03926EB9B6E00EA2A33 /* Main.storyboard in Resources */,
 				D001B23D270A00AC002BB9D2 /* Inter-ExtraBold.ttf in Resources */,
@@ -359,11 +391,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D001B24F270A09E4002BB9D2 /* cellListTypeHome.swift in Sources */,
+				D0B57CFC270B43DD006EEA38 /* cellPost.swift in Sources */,
 				D001B24B270A06D3002BB9D2 /* HomeTableView.swift in Sources */,
 				D0FEA03626EB9B6E00EA2A33 /* ViewController.swift in Sources */,
+				D04F52C5270B3C3F00995194 /* UIColor+Extension.swift in Sources */,
+				D04F52C2270B30F200995194 /* UITableViewCell+Extension.swift in Sources */,
 				D001B245270A051E002BB9D2 /* HomeVC.swift in Sources */,
 				D0FEA03226EB9B6E00EA2A33 /* AppDelegate.swift in Sources */,
 				D0FEA03426EB9B6E00EA2A33 /* SceneDelegate.swift in Sources */,
+				D08B4141270B403200709FAC /* UIView+Extension.swift in Sources */,
 				D0FEA0B826EB9F2B00EA2A33 /* MainTabbarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
