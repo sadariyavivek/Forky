@@ -10,4 +10,5 @@ import UIKit
 extension UIColor {
     static let seperatorGray = UIColor(named: "seperatorGray")
     static let borderGray = UIColor(named: "borderGray")
+    static let black = UIColor(named: "black")
 }

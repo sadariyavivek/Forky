@@ -9,6 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var btnFilter: UIButton!
     @IBOutlet weak var tableView: HomeTableView!
     @IBOutlet weak var btnFollowing: UIButton!
     @IBOutlet weak var btnRecent: UIButton!
@@ -32,6 +33,10 @@ class HomeVC: UIViewController {
         //tableView.register(DefiYieldDetailHeader.nib, forHeaderFooterViewReuseIdentifier: DefiYieldDetailHeader.identifier)
         tableView.register(cellListTypeHome.nib, forCellReuseIdentifier: cellListTypeHome.identifier)
         tableView.register(cellPost.nib, forCellReuseIdentifier: cellPost.identifier)
+        
+        btnFilter.layer.cornerRadius = 4.0
+        btnFilter.layer.borderColor = UIColor.black?.cgColor
+        btnFilter.layer.borderWidth = 1.0
     }
     
     /*

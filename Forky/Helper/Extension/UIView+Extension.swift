@@ -64,7 +64,7 @@ extension UIView {
     
     func addShadow(cornerRadius:CGFloat = 10.0,opacity:Float = 0.25) {
         // Shadow
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.black?.cgColor
         layer.shadowOpacity = opacity
         layer.shadowOffset = CGSize(width: 0, height: 1.5)
         layer.shadowRadius = 4.0
@@ -77,7 +77,7 @@ extension UIView {
     
     func addShadowToTopOnly(cornerRadius:CGFloat = 10.0,opacity:Float = 0.05) {
         // Shadow
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.black?.cgColor
         layer.shadowOpacity = opacity
         layer.shadowOffset = CGSize(width: 0, height: -7.5)
         layer.shadowRadius = 5.0
@@ -90,7 +90,7 @@ extension UIView {
     
     func addShadowWithAlpha(opacity:Float = 0.5) {
         // Shadow
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.black?.cgColor
         layer.shadowOpacity = opacity
         layer.shadowOffset = CGSize(width: 0, height: 1.5)
         layer.shadowRadius = 4.0
@@ -100,7 +100,7 @@ extension UIView {
     
     func addShadowWithNewDesign(opacity:Float = 0.2) {
         // Shadow
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.black?.cgColor
         layer.shadowOpacity = opacity
         layer.shadowOffset = CGSize(width: 0, height: 2)
         layer.shadowRadius = 3.0
@@ -110,7 +110,7 @@ extension UIView {
     
     func addShadowWithOffset(opacity:Float = 0.5,x:CGFloat = 0.0,y:CGFloat = 1.5) {
         // Shadow
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.black?.cgColor
         layer.shadowOpacity = opacity
         layer.shadowOffset = CGSize(width: x, height: y)
         layer.shadowRadius = 3.0
@@ -147,4 +147,10 @@ extension UIView {
     class func instantiateFromNib<T: UIView>(_ viewType: T.Type) -> T {
         return Bundle.main.loadNibNamed(String(describing: viewType), owner: nil, options: nil)?.first as! T
     }
+    
+    func roundedView() {
+        self.layer.cornerRadius = self.frame.size.height/2
+        self.clipsToBounds = true
+    }
+    
 }
