@@ -1,18 +1,19 @@
 //
-//  HomeTableView.swift
+//  SavedTableView.swift
 //  Forky
 //
-//  Created by Vivek Sadariya on 03/10/21.
+//  Created by Vivek Sadariya on 05/01/22.
 //
 
 import UIKit
 
-class HomeTableView: UITableView {
+class SavedTableView: UITableView {
     //var viewModel:DefiYeidDetailViewModel?
     var hSectionHeader:CGFloat = 0.0
     var hSectionFooter:CGFloat = 0.0
     var isScrolltoTop = true
     var callBackSrollTop:((Bool)->Void)?
+    var viewModel:SavedViewModel = SavedViewModel()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -50,14 +51,14 @@ class HomeTableView: UITableView {
 
 }
 
-extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
+extension SavedTableView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return hSectionFooter
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return viewModel.data.section.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -69,22 +70,31 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 0
+        switch viewModel.data.section[section] {
+        case .search:
+            return 1
+        case .postGrid:
+            return 1
         }
-        return 10
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        switch viewModel.data.section[indexPath.section] {
+        case .search:
+            return UITableView.automaticDimension
+        case .postGrid:
+            return 500
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellListTypeHome.identifier) as? cellListTypeHome else { return UITableViewCell() }
+        switch viewModel.data.section[indexPath.section] {
+        case .search:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellSavedSearch.identifier) as? CellSavedSearch else { return UITableViewCell() }
             return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellPost.identifier) as? cellPost else { return UITableViewCell() }
+        case .postGrid:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellSavedPostContainer.identifier) as? CellSavedPostContainer else { return UITableViewCell() }
+            cell.collview.reloadData()
             return cell
         }
     }

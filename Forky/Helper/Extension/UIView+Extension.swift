@@ -108,7 +108,7 @@ extension UIView {
         layer.rasterizationScale = UIScreen.main.scale
     }
     
-    func addShadowWithOffset(opacity:Float = 0.5,x:CGFloat = 0.0,y:CGFloat = 1.5) {
+    func addShadowWithOffset(opacity:Float = 0.5, shadowRadius:Float = 3.0, x:CGFloat = 0.0, y:CGFloat = 1.5) {
         // Shadow
         layer.shadowColor = UIColor.black?.cgColor
         layer.shadowOpacity = opacity

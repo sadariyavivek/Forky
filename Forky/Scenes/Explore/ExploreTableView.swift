@@ -1,18 +1,19 @@
 //
-//  HomeTableView.swift
+//  ExploreTableView.swift
 //  Forky
 //
-//  Created by Vivek Sadariya on 03/10/21.
+//  Created by Vivek Sadariya on 09/10/21.
 //
 
 import UIKit
 
-class HomeTableView: UITableView {
+class ExploreTableView: UITableView {
     //var viewModel:DefiYeidDetailViewModel?
     var hSectionHeader:CGFloat = 0.0
     var hSectionFooter:CGFloat = 0.0
     var isScrolltoTop = true
     var callBackSrollTop:((Bool)->Void)?
+    var viewModel:ExploreViewModel = ExploreViewModel()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -50,14 +51,14 @@ class HomeTableView: UITableView {
 
 }
 
-extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
+extension ExploreTableView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return hSectionFooter
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return viewModel.data.section.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -69,10 +70,18 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 0
+        switch viewModel.data.section[section] {
+        case .carousel:
+            return 1
+        case .search:
+            return 1
+        case .experience:
+            return 1
+        case .nearbyFlt:
+            return 1
+        case .nearby:
+            return 10
         }
-        return 10
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -80,11 +89,22 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellListTypeHome.identifier) as? cellListTypeHome else { return UITableViewCell() }
+        switch viewModel.data.section[indexPath.section] {
+        case .carousel:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellExploreCarousel.identifier) as? cellExploreCarousel else { return UITableViewCell() }
             return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellPost.identifier) as? cellPost else { return UITableViewCell() }
+        case .search:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellSearchExplore.identifier) as? cellSearchExplore else { return UITableViewCell() }
+
+            return cell
+        case .experience:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellExploreExperience.identifier) as? CellExploreExperience else { return UITableViewCell() }
+            return cell
+        case .nearbyFlt:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellNearByRestoFlt.identifier) as? cellNearByRestoFlt else { return UITableViewCell() }
+            return cell
+        case .nearby:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellNearbyResto.identifier) as? CellNearbyResto else { return UITableViewCell() }
             return cell
         }
     }

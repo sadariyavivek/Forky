@@ -1,19 +1,23 @@
 //
-//  HomeTableView.swift
+//  ProfileTableView.swift
 //  Forky
 //
-//  Created by Vivek Sadariya on 03/10/21.
+//  Created by Vivek Sadariya on 05/01/22.
 //
 
 import UIKit
 
-class HomeTableView: UITableView {
-    //var viewModel:DefiYeidDetailViewModel?
+class ProfileTableView: UITableView {
+
     var hSectionHeader:CGFloat = 0.0
     var hSectionFooter:CGFloat = 0.0
-    var isScrolltoTop = true
-    var callBackSrollTop:((Bool)->Void)?
-    
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupTablview()
@@ -28,29 +32,9 @@ class HomeTableView: UITableView {
 //        self.contentInset = UIEdgeInsets(top: -hSectionHeader, left: 0, bottom: 0, right: 0)
 //        self.contentInsetAdjustmentBehavior = .never
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < 10 {
-            callBackSrollTop?(true)
-            isScrolltoTop = true
-        } else {
-            if isScrolltoTop == true {
-                callBackSrollTop?(false)
-            }
-            isScrolltoTop = false
-        }
-    }
-
 }
 
-extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
+extension ProfileTableView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return hSectionFooter
@@ -70,9 +54,9 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 0
+            return 1
         }
-        return 10
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -81,10 +65,10 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellListTypeHome.identifier) as? cellListTypeHome else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellProfilePic.identifier) as? CellProfilePic else { return UITableViewCell() }
             return cell
         } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellPost.identifier) as? cellPost else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellProfile.identifier) as? CellProfile else { return UITableViewCell() }
             return cell
         }
     }
