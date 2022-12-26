@@ -16,7 +16,6 @@ class ExploreVC: UIViewController {
         super.viewDidLoad()
 
         setComponent()
-        // Do any additional setup after loading the view.
     }
     
     private func setComponent() {

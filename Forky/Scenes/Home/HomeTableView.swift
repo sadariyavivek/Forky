@@ -13,6 +13,7 @@ class HomeTableView: UITableView {
     var hSectionFooter:CGFloat = 0.0
     var isScrolltoTop = true
     var callBackSrollTop:((Bool)->Void)?
+    var callBackSlc:(()->Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -85,12 +86,13 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellPost.identifier) as? cellPost else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-  
+        callBackSlc?()
     }
  
     func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {

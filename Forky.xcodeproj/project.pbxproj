@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012E83DE28FC145A007FB356 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E83DD28FC145A007FB356 /* CardView.swift */; };
+		012E83E028FC17CA007FB356 /* RecomendedRestoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E83DF28FC17CA007FB356 /* RecomendedRestoView.swift */; };
+		0147EAE528D600D100DB66CB /* RestoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147EAE428D600D100DB66CB /* RestoDetailView.swift */; };
+		01780B5428D5E93F00031DF4 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01780B5328D5E93F00031DF4 /* UIViewController+extension.swift */; };
+		01780B5628D5EDBD00031DF4 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01780B5528D5EDBD00031DF4 /* FilterViewModel.swift */; };
+		01780B5928D5F08A00031DF4 /* FilterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01780B5828D5F08A00031DF4 /* FilterCollectionView.swift */; };
+		01780B5C28D5F0CC00031DF4 /* CellFilterCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01780B5A28D5F0CC00031DF4 /* CellFilterCat.swift */; };
+		01780B5D28D5F0CC00031DF4 /* CellFilterCat.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01780B5B28D5F0CC00031DF4 /* CellFilterCat.xib */; };
+		018D085228CA36DB00A56F5B /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D085128CA36DB00A56F5B /* FilterVC.swift */; };
+		018D085428CA373000A56F5B /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018D085328CA373000A56F5B /* Filter.storyboard */; };
+		018D085628CA3E3D00A56F5B /* FilterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D085528CA3E3D00A56F5B /* FilterTableView.swift */; };
+		019FE74B28FBEDEB00B1C60D /* SegementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019FE74A28FBEDEA00B1C60D /* SegementView.swift */; };
 		D001B23B270A00AC002BB9D2 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D001B232270A00AB002BB9D2 /* Inter-Thin.ttf */; };
 		D001B23C270A00AC002BB9D2 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D001B233270A00AB002BB9D2 /* Inter-Bold.ttf */; };
 		D001B23D270A00AC002BB9D2 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D001B234270A00AB002BB9D2 /* Inter-ExtraBold.ttf */; };
@@ -91,6 +103,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012E83DD28FC145A007FB356 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		012E83DF28FC17CA007FB356 /* RecomendedRestoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedRestoView.swift; sourceTree = "<group>"; };
+		0147EAE428D600D100DB66CB /* RestoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoDetailView.swift; sourceTree = "<group>"; };
+		01780B5328D5E93F00031DF4 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		01780B5528D5EDBD00031DF4 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		01780B5828D5F08A00031DF4 /* FilterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionView.swift; sourceTree = "<group>"; };
+		01780B5A28D5F0CC00031DF4 /* CellFilterCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFilterCat.swift; sourceTree = "<group>"; };
+		01780B5B28D5F0CC00031DF4 /* CellFilterCat.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellFilterCat.xib; sourceTree = "<group>"; };
+		018D085128CA36DB00A56F5B /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		018D085328CA373000A56F5B /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		018D085528CA3E3D00A56F5B /* FilterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableView.swift; sourceTree = "<group>"; };
+		019FE74A28FBEDEA00B1C60D /* SegementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegementView.swift; sourceTree = "<group>"; };
 		D001B232270A00AB002BB9D2 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		D001B233270A00AB002BB9D2 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		D001B234270A00AB002BB9D2 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -188,6 +212,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0147EAE328D5FFD500DB66CB /* RestoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0147EAE428D600D100DB66CB /* RestoDetailView.swift */,
+				019FE74A28FBEDEA00B1C60D /* SegementView.swift */,
+				012E83DD28FC145A007FB356 /* CardView.swift */,
+				012E83DF28FC17CA007FB356 /* RecomendedRestoView.swift */,
+			);
+			path = RestoDetail;
+			sourceTree = "<group>";
+		};
+		01780B5728D5EDC100031DF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01780B5A28D5F0CC00031DF4 /* CellFilterCat.swift */,
+				01780B5B28D5F0CC00031DF4 /* CellFilterCat.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		018D085028CA36C700A56F5B /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				018D085128CA36DB00A56F5B /* FilterVC.swift */,
+				018D085528CA3E3D00A56F5B /* FilterTableView.swift */,
+				01780B5828D5F08A00031DF4 /* FilterCollectionView.swift */,
+				018D085328CA373000A56F5B /* Filter.storyboard */,
+				01780B5528D5EDBD00031DF4 /* FilterViewModel.swift */,
+				01780B5728D5EDC100031DF4 /* Views */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		D001B2302709FFFD002BB9D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +357,7 @@
 				D0B5DE052711BE7400B59C90 /* UICollectionViewCell+extension.swift */,
 				D04F52C4270B3C3F00995194 /* UIColor+Extension.swift */,
 				D08B4140270B403200709FAC /* UIView+Extension.swift */,
+				01780B5328D5E93F00031DF4 /* UIViewController+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -405,6 +463,8 @@
 		D0FEA0A926EB9BB300EA2A33 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0147EAE328D5FFD500DB66CB /* RestoDetail */,
+				018D085028CA36C700A56F5B /* Filter */,
 				D00836702785D60C003B8FFC /* Saved */,
 				D008366F2785D601003B8FFC /* Profile */,
 				D0B5DDEA2711B42C00B59C90 /* Explore */,
@@ -539,6 +599,7 @@
 				D001B23C270A00AC002BB9D2 /* Inter-Bold.ttf in Resources */,
 				D0FEA03E26EB9B6F00EA2A33 /* LaunchScreen.storyboard in Resources */,
 				D008367E2785D6EE003B8FFC /* CellProfile.xib in Resources */,
+				01780B5D28D5F0CC00031DF4 /* CellFilterCat.xib in Resources */,
 				D0B57CFD270B43DD006EEA38 /* cellPost.xib in Resources */,
 				D0AD52D42785DDCE00CA480B /* CellSavedSearch.xib in Resources */,
 				D0FEA03B26EB9B6F00EA2A33 /* Assets.xcassets in Resources */,
@@ -555,6 +616,7 @@
 				D001B240270A00AC002BB9D2 /* Inter-Medium.ttf in Resources */,
 				D008367A2785D6CD003B8FFC /* CellProfilePic.xib in Resources */,
 				D0AD52DD2785E13700CA480B /* CellSavedPost.xib in Resources */,
+				018D085428CA373000A56F5B /* Filter.storyboard in Resources */,
 				D0F5C28E272D54DA0089D1B1 /* cellNearByRestoFlt.xib in Resources */,
 				D0B5DDF32711B6E300B59C90 /* cellExploreCarousel.xib in Resources */,
 				D0691589271471D800FE28A1 /* cellSearchExplore.xib in Resources */,
@@ -587,6 +649,7 @@
 			files = (
 				D001B24F270A09E4002BB9D2 /* cellListTypeHome.swift in Sources */,
 				D0B5DDEE2711B47500B59C90 /* ExploreTableView.swift in Sources */,
+				01780B5628D5EDBD00031DF4 /* FilterViewModel.swift in Sources */,
 				D0B57CFC270B43DD006EEA38 /* cellPost.swift in Sources */,
 				D0691588271471D800FE28A1 /* cellSearchExplore.swift in Sources */,
 				D001B24B270A06D3002BB9D2 /* HomeTableView.swift in Sources */,
@@ -596,11 +659,14 @@
 				D0B5DE002711BB3000B59C90 /* CarouselExploreLayout.swift in Sources */,
 				D00836722785D627003B8FFC /* ProfileVC.swift in Sources */,
 				D04F52C5270B3C3F00995194 /* UIColor+Extension.swift in Sources */,
+				019FE74B28FBEDEB00B1C60D /* SegementView.swift in Sources */,
+				01780B5C28D5F0CC00031DF4 /* CellFilterCat.swift in Sources */,
 				D00836802785DAF4003B8FFC /* SavedVC.swift in Sources */,
 				D0F5C289272D38B40089D1B1 /* CellExperience.swift in Sources */,
 				D0B5DDF52711B76C00B59C90 /* ExploreViewModel.swift in Sources */,
 				D0F5C284272D352D0089D1B1 /* CellExploreExperience.swift in Sources */,
 				D00836842785DB3D003B8FFC /* SavedSectionModel.swift in Sources */,
+				012E83DE28FC145A007FB356 /* CardView.swift in Sources */,
 				D0AD52D02785DD6D00CA480B /* SavedViewModel.swift in Sources */,
 				D00836742785D67C003B8FFC /* ProfileTableView.swift in Sources */,
 				D04F52C2270B30F200995194 /* UITableViewCell+Extension.swift in Sources */,
@@ -608,15 +674,21 @@
 				D008367D2785D6EE003B8FFC /* CellProfile.swift in Sources */,
 				D0B5DDF22711B6E300B59C90 /* cellExploreCarousel.swift in Sources */,
 				D0B5DDFB2711B7B900B59C90 /* ExploreSectionModel.swift in Sources */,
+				01780B5928D5F08A00031DF4 /* FilterCollectionView.swift in Sources */,
 				D0B5DDEC2711B45900B59C90 /* ExploreVC.swift in Sources */,
 				D0F5C28D272D54DA0089D1B1 /* cellNearByRestoFlt.swift in Sources */,
 				D001B245270A051E002BB9D2 /* HomeVC.swift in Sources */,
+				01780B5428D5E93F00031DF4 /* UIViewController+extension.swift in Sources */,
+				0147EAE528D600D100DB66CB /* RestoDetailView.swift in Sources */,
 				D0FEA03226EB9B6E00EA2A33 /* AppDelegate.swift in Sources */,
+				018D085628CA3E3D00A56F5B /* FilterTableView.swift in Sources */,
 				D0FEA03426EB9B6E00EA2A33 /* SceneDelegate.swift in Sources */,
 				D0AD52D72785DDE600CA480B /* CellSavedPostContainer.swift in Sources */,
 				D08B4141270B403200709FAC /* UIView+Extension.swift in Sources */,
+				012E83E028FC17CA007FB356 /* RecomendedRestoView.swift in Sources */,
 				D0B5DE062711BE7400B59C90 /* UICollectionViewCell+extension.swift in Sources */,
 				D00836792785D6CD003B8FFC /* CellProfilePic.swift in Sources */,
+				018D085228CA36DB00A56F5B /* FilterVC.swift in Sources */,
 				D0B5DDFE2711BABE00B59C90 /* collCarouselExplore.swift in Sources */,
 				D0AD52D32785DDCE00CA480B /* CellSavedSearch.swift in Sources */,
 				D0FEA0B826EB9F2B00EA2A33 /* MainTabbarVC.swift in Sources */,
@@ -796,15 +868,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = A25R38QM35;
 				INFOPLIST_FILE = Forky/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.memento.Forky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Forkey Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -815,15 +890,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vivekkumar Sadariya (A25R38QM35)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = A25R38QM35;
 				INFOPLIST_FILE = Forky/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.memento.Forky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Dist Forkey";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

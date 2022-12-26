@@ -83,7 +83,7 @@ extension SavedTableView: UITableViewDelegate, UITableViewDataSource {
         case .search:
             return UITableView.automaticDimension
         case .postGrid:
-            return 500
+            return 2000
         }
     }
     

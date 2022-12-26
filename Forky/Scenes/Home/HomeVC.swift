@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeVC: UIViewController {
 
@@ -15,6 +16,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView: HomeTableView!
     @IBOutlet weak var btnFollowing: UIButton!
     @IBOutlet weak var btnRecent: UIButton!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,11 +52,20 @@ class HomeVC: UIViewController {
                 }
             }
         }
+        tableView.callBackSlc = { [weak self] in
+            self?.navigationController?.pushViewController(UIHostingController(rootView: RestoDetailView()), animated: true)
+        }
         btnFilter.layer.cornerRadius = 4.0
         btnFilter.layer.borderColor = UIColor.black?.cgColor
         btnFilter.layer.borderWidth = 1.0
     }
 
+    @IBAction func actFilter(_ sender: Any) {
+        let vc = FilterVC.instantiateFromStoryboard("Filter")
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true)
+    }
     /*
     // MARK: - Navigation
 
