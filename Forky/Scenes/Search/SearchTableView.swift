@@ -1,20 +1,20 @@
 //
-//  HomeTableView.swift
+//  SearchTableView.swift
 //  Forky
 //
-//  Created by Vivek Sadariya on 03/10/21.
+//  Created by Vivek Patel on 26/12/22.
 //
 
 import UIKit
 
-class HomeTableView: UITableView {
+class SearchTableView: UITableView {
+    
     //var viewModel:DefiYeidDetailViewModel?
     var hSectionHeader:CGFloat = 0.0
     var hSectionFooter:CGFloat = 0.0
     var isScrolltoTop = true
     var callBackSrollTop:((Bool)->Void)?
-    var callBackSlc:(()->Void)?
-    var viewModel: HomeViewModel?
+    var viewModel:SearchViewModel = SearchViewModel()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -49,17 +49,16 @@ class HomeTableView: UITableView {
             isScrolltoTop = false
         }
     }
-
 }
 
-extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
+extension SearchTableView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return hSectionFooter
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return viewModel.data.section.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -71,10 +70,12 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 0
+        switch viewModel.data.section[section] {
+        case .search:
+            return 1
+        case .nearby:
+            return 10
         }
-        return viewModel?.dataPost?.data?.vendor_posts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -82,22 +83,19 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellListTypeHome.identifier) as? cellListTypeHome else { return UITableViewCell() }
+        switch viewModel.data.section[indexPath.section] {
+        case .search:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellSearchTF.identifier) as? CellSearchTF else { return UITableViewCell() }
+
             return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellPost.identifier) as? cellPost else { return UITableViewCell() }
-            cell.selectionStyle = .none
-            if let data = viewModel?.dataPost?.data?.vendor_posts?[indexPath.row] {
-                cell.lblSubtitle.text = data.caption
-                cell.imgPost.loadImageUsingCache(withUrl: data.photo ?? "")
-            }
+        case .nearby:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellNearbyResto.identifier) as? CellNearbyResto else { return UITableViewCell() }
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        callBackSlc?()
+  
     }
  
     func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {

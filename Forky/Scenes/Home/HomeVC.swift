@@ -17,6 +17,9 @@ class HomeVC: UIViewController {
     @IBOutlet weak var btnFollowing: UIButton!
     @IBOutlet weak var btnRecent: UIButton!
   
+    @IBOutlet weak var cnstTabIndicatorLeading: NSLayoutConstraint!
+    private let viewModel = HomeViewModel(HomeService())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,13 +56,33 @@ class HomeVC: UIViewController {
             }
         }
         tableView.callBackSlc = { [weak self] in
-            self?.navigationController?.pushViewController(UIHostingController(rootView: RestoDetailView()), animated: true)
+            //self?.navigationController?.pushViewController(UIHostingController(rootView: RestoDetailView()), animated: true)
         }
         btnFilter.layer.cornerRadius = 4.0
         btnFilter.layer.borderColor = UIColor.black?.cgColor
         btnFilter.layer.borderWidth = 1.0
-    }
+        
+        viewModel.getPostList {
+            self.tableView.viewModel = self.viewModel
+            self.tableView.reloadData()
+        } failure: { error in
+            
+        }
 
+        //viewModel.getPostList()
+    }
+    
+    @IBAction func actAll(_ sender: UIButton) {
+        cnstTabIndicatorLeading.constant = sender.frame.origin.x + 24
+    }
+    
+    @IBAction func actOffer(_ sender: UIButton) {
+        cnstTabIndicatorLeading.constant = sender.frame.origin.x + 24
+    }
+    
+    @IBAction func actEvent(_ sender: UIButton) {
+        cnstTabIndicatorLeading.constant = sender.frame.origin.x + 24
+    }
     @IBAction func actFilter(_ sender: Any) {
         let vc = FilterVC.instantiateFromStoryboard("Filter")
         vc.modalPresentationStyle = .overFullScreen

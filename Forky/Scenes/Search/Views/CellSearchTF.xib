@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellSearchTF" rowHeight="138" id="pas-fN-G5g" customClass="CellSearchTF" customModule="Forky" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="pas-fN-G5g" id="EQr-Yk-kev">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEu-1b-xgi">
+                        <rect key="frame" x="24" y="24" width="272" height="40"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6K-Qj-pij">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVo-Ps-TZR">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Tk8-Oh-fwD">
+                                                <rect key="frame" x="14" y="12" width="16" height="16"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="4Dk-o6-WCP"/>
+                                                    <constraint firstAttribute="width" constant="16" id="PKJ-Gs-TVl"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="EhE-48-Ucv"/>
+                                            <constraint firstItem="Tk8-Oh-fwD" firstAttribute="leading" secondItem="lVo-Ps-TZR" secondAttribute="leading" constant="14" id="Z82-FY-RQE"/>
+                                            <constraint firstItem="Tk8-Oh-fwD" firstAttribute="centerY" secondItem="lVo-Ps-TZR" secondAttribute="centerY" id="iR6-mm-nKs"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rlf-ca-6L5">
+                                        <rect key="frame" x="46" y="0.0" width="226" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search restaurant, area, category..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="glk-hj-LeI">
+                                                <rect key="frame" x="0.0" y="0.0" width="226" height="40"/>
+                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="glk-hj-LeI" secondAttribute="trailing" id="6jG-fD-9sD"/>
+                                            <constraint firstItem="glk-hj-LeI" firstAttribute="leading" secondItem="Rlf-ca-6L5" secondAttribute="leading" id="BUY-MA-Uhy"/>
+                                            <constraint firstAttribute="bottom" secondItem="glk-hj-LeI" secondAttribute="bottom" id="HTg-C5-eZb"/>
+                                            <constraint firstItem="glk-hj-LeI" firstAttribute="top" secondItem="Rlf-ca-6L5" secondAttribute="top" id="fcb-oa-913"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="U6K-Qj-pij" firstAttribute="top" secondItem="bEu-1b-xgi" secondAttribute="top" id="3iu-Ys-Zrx"/>
+                            <constraint firstAttribute="trailing" secondItem="U6K-Qj-pij" secondAttribute="trailing" id="9iV-Kh-RTC"/>
+                            <constraint firstItem="U6K-Qj-pij" firstAttribute="leading" secondItem="bEu-1b-xgi" secondAttribute="leading" id="TPa-KS-OnU"/>
+                            <constraint firstAttribute="bottom" secondItem="U6K-Qj-pij" secondAttribute="bottom" id="lJW-eg-nfg"/>
+                            <constraint firstAttribute="height" constant="40" id="t1Z-Iv-I6V"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bEu-1b-xgi" secondAttribute="bottom" constant="24" id="EcZ-PZ-DKg"/>
+                    <constraint firstItem="bEu-1b-xgi" firstAttribute="top" secondItem="EQr-Yk-kev" secondAttribute="top" constant="24" id="ZmP-dm-s5e"/>
+                    <constraint firstAttribute="trailing" secondItem="bEu-1b-xgi" secondAttribute="trailing" constant="24" id="afu-K1-oZc"/>
+                    <constraint firstItem="bEu-1b-xgi" firstAttribute="leading" secondItem="EQr-Yk-kev" secondAttribute="leading" constant="24" id="fSn-LV-qH8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Iqg-pZ-KtR"/>
+            <connections>
+                <outlet property="viewContainer" destination="bEu-1b-xgi" id="ayr-ho-JsQ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="127.23214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Search" width="16.333333969116211" height="16"/>
+    </resources>
+</document>

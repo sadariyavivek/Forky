@@ -9,6 +9,7 @@ import UIKit
 
 class cellPost: UITableViewCell {
 
+    @IBOutlet weak var lblSubtitle: UILabel!
     @IBOutlet weak var imgPost: UIImageView!
     @IBOutlet weak var imgPostBy: UIImageView!
     override func awakeFromNib() {
