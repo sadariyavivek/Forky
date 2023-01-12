@@ -69,7 +69,6 @@ class HomeVC: UIViewController {
             
         }
 
-        //viewModel.getPostList()
     }
     
     @IBAction func actAll(_ sender: UIButton) {
