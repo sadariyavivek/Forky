@@ -11,16 +11,15 @@ final class HomeViewModel: NSObject, ObservableObject {
     private var service: HomeService
     var dataPost: PostListModel?
     
-    var callbackDataFetched: (() -> Void)?
     init(_ service: HomeService) {
         self.service = service
     }
 
-    func getPostList(success:@escaping () -> Void, failure:@escaping (Error) -> Void) {
+    func getPostList(type: String?,success:@escaping () -> Void, failure:@escaping (Error) -> Void) {
         Task.detached(priority: .background) { [weak self] in
             guard let self = self else { return }
             do {
-                async let _withdrawableLimit = try self.service.getPostList()
+                async let _withdrawableLimit = try self.service.getPostList(type: type)
                 let withdrawableLimit = try await _withdrawableLimit
                 self.dataPost = withdrawableLimit
                 await MainActor.run {
@@ -37,12 +36,16 @@ final class HomeViewModel: NSObject, ObservableObject {
 
 
 protocol HomeServiceProtocol: AnyObject {
-    func getPostList() async throws -> PostListModel
+    func getPostList(type: String?) async throws -> PostListModel
 }
 
 final class HomeService: HomeServiceProtocol {
-    func getPostList() async throws -> PostListModel {
-        let result = await NW.request(BasicFlowBottomSheetEndPoint.getCryptoDailyWithdrawlLimit.configuration)
+    func getPostList(type: String? = nil) async throws -> PostListModel {
+        var param = [String : Any]()
+        if let value = type {
+            param["type"] = value
+        }
+        let result = await NW.request(BasicFlowBottomSheetEndPoint.getCryptoDailyWithdrawlLimit(param).configuration)
         switch result {
         case .success(let data):
             if let response = data.decode(PostListModel.self) {
@@ -57,14 +60,14 @@ final class HomeService: HomeServiceProtocol {
 }
 
 enum BasicFlowBottomSheetEndPoint {
-    case getCryptoDailyWithdrawlLimit
+    case getCryptoDailyWithdrawlLimit(_ parameters: [String : Any])
     
     var configuration: URLConfiguration {
         let base = AppConfiguration.shared.baseURL.absoluteString
         
         switch self {
-        case .getCryptoDailyWithdrawlLimit:
-            return URLConfiguration(endPoint: base + "v1/posts", method: .get)
+        case .getCryptoDailyWithdrawlLimit(let parameters):
+            return URLConfiguration(endPoint: base + "v1/posts", method: .get, parameters: parameters)
         }
     }
 }

@@ -61,26 +61,31 @@ class HomeVC: UIViewController {
         btnFilter.layer.cornerRadius = 4.0
         btnFilter.layer.borderColor = UIColor.black?.cgColor
         btnFilter.layer.borderWidth = 1.0
-        
-        viewModel.getPostList {
+        getPostList(type: nil)
+    }
+
+    private func getPostList(type:String?) {
+        viewModel.getPostList(type: type, success: {
             self.tableView.viewModel = self.viewModel
             self.tableView.reloadData()
-        } failure: { error in
+        }, failure: { error in
             
-        }
-
+        })
     }
     
     @IBAction func actAll(_ sender: UIButton) {
         cnstTabIndicatorLeading.constant = sender.frame.origin.x + 24
+        getPostList(type: nil)
     }
     
     @IBAction func actOffer(_ sender: UIButton) {
         cnstTabIndicatorLeading.constant = sender.frame.origin.x + 24
+        getPostList(type: "offer")
     }
     
     @IBAction func actEvent(_ sender: UIButton) {
         cnstTabIndicatorLeading.constant = sender.frame.origin.x + 24
+        getPostList(type: "event")
     }
     @IBAction func actFilter(_ sender: Any) {
         let vc = FilterVC.instantiateFromStoryboard("Filter")
