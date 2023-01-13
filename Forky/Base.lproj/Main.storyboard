@@ -13,6 +13,9 @@
         <array key="Inter-Medium.ttf">
             <string>Inter-Medium</string>
         </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
         <array key="Inter-SemiBold.ttf">
             <string>Inter-SemiBold</string>
         </array>
@@ -507,30 +510,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6E-9r-hG5">
+                                <rect key="frame" x="24" y="88" width="366" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Lp-Ld-e7p">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-qQ-j3B">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search" translatesAutoresizingMaskIntoConstraints="NO" id="6au-L7-ccY">
+                                                        <rect key="frame" x="14" y="12" width="16" height="16"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="16" id="P53-Wm-gFf"/>
+                                                            <constraint firstAttribute="height" constant="16" id="yjB-FC-lAI"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="6au-L7-ccY" firstAttribute="leading" secondItem="Nte-qQ-j3B" secondAttribute="leading" constant="14" id="53c-v0-M1f"/>
+                                                    <constraint firstAttribute="width" constant="46" id="ffi-PN-NhY"/>
+                                                    <constraint firstItem="6au-L7-ccY" firstAttribute="centerY" secondItem="Nte-qQ-j3B" secondAttribute="centerY" id="ifO-fo-AgJ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgn-br-gwL">
+                                                <rect key="frame" x="46" y="0.0" width="320" height="40"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search restaurant, area, category..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="riN-PB-IA2">
+                                                        <rect key="frame" x="5" y="1" width="310" height="38"/>
+                                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="riN-PB-IA2" secondAttribute="trailing" constant="5" id="3oI-Dk-MxP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="riN-PB-IA2" secondAttribute="bottom" constant="1" id="Fbh-sC-aP7"/>
+                                                    <constraint firstItem="riN-PB-IA2" firstAttribute="leading" secondItem="rgn-br-gwL" secondAttribute="leading" constant="5" id="P1O-Jf-vrj"/>
+                                                    <constraint firstItem="riN-PB-IA2" firstAttribute="top" secondItem="rgn-br-gwL" secondAttribute="top" constant="1" id="eHz-RZ-Zn3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9Lp-Ld-e7p" firstAttribute="leading" secondItem="X6E-9r-hG5" secondAttribute="leading" id="Pof-fd-2jS"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Lp-Ld-e7p" secondAttribute="bottom" id="evt-5j-TnV"/>
+                                    <constraint firstItem="9Lp-Ld-e7p" firstAttribute="top" secondItem="X6E-9r-hG5" secondAttribute="top" id="k0Z-Q2-jdG"/>
+                                    <constraint firstAttribute="height" constant="40" id="lJD-0O-J6z"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Lp-Ld-e7p" secondAttribute="trailing" id="sgv-3F-icK"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DhR-bQ-5Ck" customClass="SearchTableView" customModule="Forky" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="24" y="128" width="366" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JmO-IN-5mo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JmO-IN-5mo" firstAttribute="trailing" secondItem="DhR-bQ-5Ck" secondAttribute="trailing" id="6Oa-3b-zLe"/>
+                            <constraint firstItem="JmO-IN-5mo" firstAttribute="trailing" secondItem="DhR-bQ-5Ck" secondAttribute="trailing" constant="24" id="6Oa-3b-zLe"/>
                             <constraint firstItem="JmO-IN-5mo" firstAttribute="bottom" secondItem="DhR-bQ-5Ck" secondAttribute="bottom" id="9FZ-Fi-Aw6"/>
-                            <constraint firstItem="DhR-bQ-5Ck" firstAttribute="leading" secondItem="JmO-IN-5mo" secondAttribute="leading" id="BoH-Bo-usm"/>
-                            <constraint firstItem="DhR-bQ-5Ck" firstAttribute="top" secondItem="JmO-IN-5mo" secondAttribute="top" id="sGC-U9-GD7"/>
+                            <constraint firstItem="DhR-bQ-5Ck" firstAttribute="leading" secondItem="JmO-IN-5mo" secondAttribute="leading" constant="24" id="BoH-Bo-usm"/>
+                            <constraint firstItem="DhR-bQ-5Ck" firstAttribute="top" secondItem="X6E-9r-hG5" secondAttribute="bottom" id="GEb-Iu-9Ft"/>
+                            <constraint firstItem="JmO-IN-5mo" firstAttribute="trailing" secondItem="X6E-9r-hG5" secondAttribute="trailing" constant="24" id="OUc-fw-gsq"/>
+                            <constraint firstItem="X6E-9r-hG5" firstAttribute="leading" secondItem="JmO-IN-5mo" secondAttribute="leading" constant="24" id="Uec-EV-Rb8"/>
+                            <constraint firstItem="X6E-9r-hG5" firstAttribute="top" secondItem="JmO-IN-5mo" secondAttribute="top" id="fRi-Kz-SNV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="Search" id="9JF-TE-mld">
                         <color key="badgeColor" name="tomato"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="tableView" destination="DhR-bQ-5Ck" id="uJ2-95-6p4"/>
+                        <outlet property="tableView" destination="DhR-bQ-5Ck" id="yCV-vT-MmA"/>
+                        <outlet property="txtSearch" destination="riN-PB-IA2" id="9VG-9c-Tvi"/>
+                        <outlet property="vwSearch" destination="rgn-br-gwL" id="p0l-Gf-Jo1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDw-iI-MQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="2221"/>
+            <point key="canvasLocation" x="757.97101449275374" y="2220.5357142857142"/>
         </scene>
     </scenes>
     <resources>

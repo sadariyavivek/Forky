@@ -32,11 +32,30 @@ final class HomeViewModel: NSObject, ObservableObject {
             }
         }
     }
+    
+    func getSearchPostList(query: String?,success:@escaping () -> Void, failure:@escaping (Error) -> Void) {
+        Task.detached(priority: .background) { [weak self] in
+            guard let self = self else { return }
+            do {
+                async let _withdrawableLimit = try self.service.getSearchPostList(query: query)
+                let withdrawableLimit = try await _withdrawableLimit
+                self.dataPost = withdrawableLimit
+                await MainActor.run {
+                    success()
+                }
+            } catch {
+                await MainActor.run {
+                    failure(error)
+                }
+            }
+        }
+    }
 }
 
 
 protocol HomeServiceProtocol: AnyObject {
     func getPostList(type: String?) async throws -> PostListModel
+    func getSearchPostList(query: String?) async throws -> PostListModel
 }
 
 final class HomeService: HomeServiceProtocol {
@@ -44,6 +63,24 @@ final class HomeService: HomeServiceProtocol {
         var param = [String : Any]()
         if let value = type {
             param["type"] = value
+        }
+        let result = await NW.request(BasicFlowBottomSheetEndPoint.getCryptoDailyWithdrawlLimit(param).configuration)
+        switch result {
+        case .success(let data):
+            if let response = data.decode(PostListModel.self) {
+                return response
+            } else {
+                throw AppError.parsingError
+            }
+        case .failure(let error):
+            throw error
+        }
+    }
+    
+    func getSearchPostList(query: String? = nil) async throws -> PostListModel {
+        var param = [String : Any]()
+        if let value = query {
+            param["q"] = value
         }
         let result = await NW.request(BasicFlowBottomSheetEndPoint.getCryptoDailyWithdrawlLimit(param).configuration)
         switch result {
@@ -104,5 +141,10 @@ struct PostListDataModel: Decodable {
 
 struct PostDataModel: Decodable {
     var caption, photo: String?
+    var from_date,to_date : String?
+    var vendor : VenderDataModel?
 }
 
+struct VenderDataModel: Decodable {
+    var business_name, address_line_1,latitude,longitude,primary_contact,logo: String?
+}
