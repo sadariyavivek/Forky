@@ -58,6 +58,7 @@ class HomeVC: UIViewController {
         tableView.callBackSlc = { [weak self] in
             //self?.navigationController?.pushViewController(UIHostingController(rootView: RestoDetailView()), animated: true)
         }
+        tableView.viewController = self
         btnFilter.layer.cornerRadius = 4.0
         btnFilter.layer.borderColor = UIColor.black?.cgColor
         btnFilter.layer.borderWidth = 1.0
@@ -67,7 +68,9 @@ class HomeVC: UIViewController {
     private func getPostList(type:String?) {
         viewModel.getPostList(type: type, success: {
             self.tableView.viewModel = self.viewModel
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }, failure: { error in
             
         })

@@ -15,7 +15,7 @@ class HomeTableView: UITableView {
     var callBackSrollTop:((Bool)->Void)?
     var callBackSlc:(()->Void)?
     var viewModel: HomeViewModel?
-    
+    var viewController : UIViewController?
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupTablview()
@@ -89,8 +89,40 @@ extension HomeTableView: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellPost.identifier) as? cellPost else { return UITableViewCell() }
             cell.selectionStyle = .none
             if let data = viewModel?.dataPost?.data?.vendor_posts?[indexPath.row] {
-                cell.lblSubtitle.text = data.caption
+                cell.lblSubtitle.text = data.caption?.htmlToString
                 cell.imgPost.loadImageUsingCache(withUrl: data.photo ?? "")
+                cell.lblPostDate.text = "Available from \(data.from_date?.convertDateFormat() ?? "") to \(data.to_date?.convertDateFormat() ?? "")"
+
+                cell.reloadExpandableLabel = {
+                    DispatchQueue.main.async {
+                        self.reloadData()
+                    }
+                }
+                
+                if let vendorData = data.vendor {
+                    cell.lblVendorName.text = vendorData.business_name
+                    cell.lblVendorAddress.text = vendorData.address_line_1
+                    cell.imgPostBy.loadImageUsingCache(withUrl: vendorData.logo ?? "")
+                    cell.btnLocationCompletion = {
+                        if let lat = vendorData.latitude, let long = vendorData.longitude,let url = URL(string: "http://maps.apple.com/?daddr=\(lat),\(long)") {
+                            if UIApplication.shared.canOpenURL(url) {
+                                  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        }
+                    }
+                    
+                    cell.btnCallCompletion = {
+                        if let strMobNumber = vendorData.primary_contact {
+                            self.viewController?.openActionSheet(title: nil, message: "Mobile Number", actionTitles: [strMobNumber], completion: { (index,title) in
+                                if let title = title {
+                                    if let url = URL(string: "tel://\(title)") {
+                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                     }
+                                }
+                            })
+                        }
+                    }
+                }
             }
             return cell
         }

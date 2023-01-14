@@ -6,35 +6,56 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SearchVC: UIViewController {
+    
     @IBOutlet weak var tableView: SearchTableView!
-    var viewModel:SearchViewModel = SearchViewModel()
+    @IBOutlet weak var vwSearch: UIView!
+    @IBOutlet weak var txtSearch: UITextField!
+    private let viewModel = SearchViewModel(SearchService())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setComponent()
         // Do any additional setup after loading the view.
+       
+        setComponent()
     }
     
+
     private func setComponent() {
         //tableView.register(DefiYieldDetailHeader.nib, forHeaderFooterViewReuseIdentifier: DefiYieldDetailHeader.identifier)
-        tableView.register(CellSearchTF.nib, forCellReuseIdentifier: CellSearchTF.identifier)
-        tableView.register(CellNearbyResto.nib, forCellReuseIdentifier: CellNearbyResto.identifier)
-        
-        tableView.viewModel = viewModel
-        tableView.reloadData()
-        
-    
+        vwSearch.layer.cornerRadius = 4.0
+        vwSearch.layer.borderWidth = 1.0
+        vwSearch.layer.borderColor = UIColor.borderGray?.cgColor
+        vwSearch.addShadowWithOffset(opacity: 0.1, shadowRadius: 1.0, x: 0, y: 1)
+        txtSearch.enablesReturnKeyAutomatically = true
+        txtSearch.delegate = self
+        txtSearch.inputAccessoryView = UIView()
+        tableView.register(cellPost.nib, forCellReuseIdentifier: cellPost.identifier)
+        tableView.viewController = self
+        getSeachPostList(query: "")
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getSeachPostList(query:String?) {
+        viewModel.getSearchPostList(query: query, success: {
+            self.tableView.viewModel = self.viewModel
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }, failure: { error in
+            
+        })
     }
-    */
 
+}
+
+extension SearchVC : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        getSeachPostList(query:textField.text)
+        self.tableView.setContentOffset(.zero, animated: false)
+        return true
+    }
 }

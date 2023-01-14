@@ -8,14 +8,14 @@
 import UIKit
 
 class SearchTableView: UITableView {
-    
     //var viewModel:DefiYeidDetailViewModel?
     var hSectionHeader:CGFloat = 0.0
     var hSectionFooter:CGFloat = 0.0
     var isScrolltoTop = true
     var callBackSrollTop:((Bool)->Void)?
-    var viewModel:SearchViewModel = SearchViewModel()
-    
+    var callBackSlc:(()->Void)?
+    var viewModel: SearchViewModel?
+    var viewController : UIViewController?
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupTablview()
@@ -49,6 +49,7 @@ class SearchTableView: UITableView {
             isScrolltoTop = false
         }
     }
+
 }
 
 extension SearchTableView: UITableViewDelegate, UITableViewDataSource {
@@ -58,7 +59,7 @@ extension SearchTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.data.section.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -70,12 +71,7 @@ extension SearchTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch viewModel.data.section[section] {
-        case .search:
-            return 1
-        case .nearby:
-            return 10
-        }
+        return viewModel?.dataPost?.data?.vendor_posts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -83,19 +79,49 @@ extension SearchTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch viewModel.data.section[indexPath.section] {
-        case .search:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellSearchTF.identifier) as? CellSearchTF else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellPost.identifier) as? cellPost else { return UITableViewCell() }
+            cell.selectionStyle = .none
+            if let data = viewModel?.dataPost?.data?.vendor_posts?[indexPath.row] {
+                cell.lblSubtitle.text = data.caption?.htmlToString
+                cell.imgPost.loadImageUsingCache(withUrl: data.photo ?? "")
+                cell.lblPostDate.text = "Available from \(data.from_date?.convertDateFormat() ?? "") to \(data.to_date?.convertDateFormat() ?? "")"
 
-            return cell
-        case .nearby:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellNearbyResto.identifier) as? CellNearbyResto else { return UITableViewCell() }
-            return cell
+                cell.reloadExpandableLabel = {
+                    DispatchQueue.main.async {
+                        self.reloadData()
+                    }
+                }
+                
+                if let vendorData = data.vendor {
+                    cell.lblVendorName.text = vendorData.business_name
+                    cell.lblVendorAddress.text = vendorData.address_line_1
+                    cell.imgPostBy.loadImageUsingCache(withUrl: vendorData.logo ?? "")
+                    cell.btnLocationCompletion = {
+                        if let lat = vendorData.latitude, let long = vendorData.longitude,let url = URL(string: "http://maps.apple.com/?daddr=\(lat),\(long)") {
+                            if UIApplication.shared.canOpenURL(url) {
+                                  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        }
+                    }
+                    
+                    cell.btnCallCompletion = {
+                        if let strMobNumber = vendorData.primary_contact {
+                            self.viewController?.openActionSheet(title: nil, message: "Mobile Number", actionTitles: [strMobNumber], completion: { (index,title) in
+                                if let title = title {
+                                    if let url = URL(string: "tel://\(title)") {
+                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                     }
+                                }
+                            })
+                        }
+                    }
+                }
         }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-  
+        callBackSlc?()
     }
  
     func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {

@@ -51,6 +51,10 @@
 		018D085628CA3E3D00A56F5B /* FilterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D085528CA3E3D00A56F5B /* FilterTableView.swift */; };
 		019FE74B28FBEDEB00B1C60D /* SegementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019FE74A28FBEDEA00B1C60D /* SegementView.swift */; };
 		01B7E64029705A2A003C6442 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7E63F29705A2A003C6442 /* HomeViewModel.swift */; };
+		0491601EA1BF05D3C5175993 /* Pods_Forky_ForkyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4996685AF5463B87ABA061B3 /* Pods_Forky_ForkyUITests.framework */; };
+		85435A86F21BF890AE7DECF8 /* Pods_ForkyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527B2D3A6C742E848B0CEDEE /* Pods_ForkyTests.framework */; };
+		88C61DB829715DD800C02178 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C61DB729715DD800C02178 /* String+Extension.swift */; };
+		88C61DBB297175F900C02178 /* ExpandableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C61DBA297175F800C02178 /* ExpandableLabel.swift */; };
 		D001B23B270A00AC002BB9D2 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D001B232270A00AB002BB9D2 /* Inter-Thin.ttf */; };
 		D001B23C270A00AC002BB9D2 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D001B233270A00AB002BB9D2 /* Inter-Bold.ttf */; };
 		D001B23D270A00AC002BB9D2 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D001B234270A00AB002BB9D2 /* Inter-ExtraBold.ttf */; };
@@ -115,6 +119,7 @@
 		D0FEA04926EB9B6F00EA2A33 /* ForkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FEA04826EB9B6F00EA2A33 /* ForkyTests.swift */; };
 		D0FEA05426EB9B6F00EA2A33 /* ForkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FEA05326EB9B6F00EA2A33 /* ForkyUITests.swift */; };
 		D0FEA0B826EB9F2B00EA2A33 /* MainTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FEA0B726EB9F2B00EA2A33 /* MainTabbarVC.swift */; };
+		F4E6C09DA9B379033CD8BEC3 /* Pods_Forky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB2CFCC4C908585EF2D9FDE /* Pods_Forky.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +184,13 @@
 		018D085528CA3E3D00A56F5B /* FilterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableView.swift; sourceTree = "<group>"; };
 		019FE74A28FBEDEA00B1C60D /* SegementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegementView.swift; sourceTree = "<group>"; };
 		01B7E63F29705A2A003C6442 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		20434B15CE21A8367D569252 /* Pods-Forky-ForkyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forky-ForkyUITests.release.xcconfig"; path = "Target Support Files/Pods-Forky-ForkyUITests/Pods-Forky-ForkyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		235456B6B0A0ECE44E68AF05 /* Pods-ForkyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForkyTests.debug.xcconfig"; path = "Target Support Files/Pods-ForkyTests/Pods-ForkyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4996685AF5463B87ABA061B3 /* Pods_Forky_ForkyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forky_ForkyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		527B2D3A6C742E848B0CEDEE /* Pods_ForkyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForkyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C61DB729715DD800C02178 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		88C61DBA297175F800C02178 /* ExpandableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableLabel.swift; sourceTree = "<group>"; };
+		CBB2CFCC4C908585EF2D9FDE /* Pods_Forky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D001B232270A00AB002BB9D2 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		D001B233270A00AB002BB9D2 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		D001B234270A00AB002BB9D2 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -249,6 +261,10 @@
 		D0FEA05326EB9B6F00EA2A33 /* ForkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkyUITests.swift; sourceTree = "<group>"; };
 		D0FEA05526EB9B6F00EA2A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0FEA0B726EB9F2B00EA2A33 /* MainTabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarVC.swift; sourceTree = "<group>"; };
+		D43994BDCDEE08529371A09E /* Pods-ForkyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForkyTests.release.xcconfig"; path = "Target Support Files/Pods-ForkyTests/Pods-ForkyTests.release.xcconfig"; sourceTree = "<group>"; };
+		E05B784C8EF2E70CD34835C3 /* Pods-Forky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forky.debug.xcconfig"; path = "Target Support Files/Pods-Forky/Pods-Forky.debug.xcconfig"; sourceTree = "<group>"; };
+		FD4382031A627EF446F77686 /* Pods-Forky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forky.release.xcconfig"; path = "Target Support Files/Pods-Forky/Pods-Forky.release.xcconfig"; sourceTree = "<group>"; };
+		FDD87FD8A721BEF1E5CD49EC /* Pods-Forky-ForkyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forky-ForkyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Forky-ForkyUITests/Pods-Forky-ForkyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E6C09DA9B379033CD8BEC3 /* Pods_Forky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85435A86F21BF890AE7DECF8 /* Pods_ForkyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0491601EA1BF05D3C5175993 /* Pods_Forky_ForkyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +420,38 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
+		17BE1E7D43CD1DC3BDE91586 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBB2CFCC4C908585EF2D9FDE /* Pods_Forky.framework */,
+				4996685AF5463B87ABA061B3 /* Pods_Forky_ForkyUITests.framework */,
+				527B2D3A6C742E848B0CEDEE /* Pods_ForkyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79C45B6866DCA047BFEA5DB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E05B784C8EF2E70CD34835C3 /* Pods-Forky.debug.xcconfig */,
+				FD4382031A627EF446F77686 /* Pods-Forky.release.xcconfig */,
+				FDD87FD8A721BEF1E5CD49EC /* Pods-Forky-ForkyUITests.debug.xcconfig */,
+				20434B15CE21A8367D569252 /* Pods-Forky-ForkyUITests.release.xcconfig */,
+				235456B6B0A0ECE44E68AF05 /* Pods-ForkyTests.debug.xcconfig */,
+				D43994BDCDEE08529371A09E /* Pods-ForkyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		88C61DB9297175F800C02178 /* ExpandableLabel */ = {
+			isa = PBXGroup;
+			children = (
+				88C61DBA297175F800C02178 /* ExpandableLabel.swift */,
+			);
+			path = ExpandableLabel;
+			sourceTree = "<group>";
+		};
 		D001B2302709FFFD002BB9D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +552,7 @@
 		D04F52BF270B30C300995194 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				88C61DB9297175F800C02178 /* ExpandableLabel */,
 				0154EB4A29707E830072FB76 /* Source */,
 				D04F52C0270B30CE00995194 /* Extension */,
 			);
@@ -516,6 +568,7 @@
 				D08B4140270B403200709FAC /* UIView+Extension.swift */,
 				01780B5328D5E93F00031DF4 /* UIViewController+extension.swift */,
 				0154EB8429708A630072FB76 /* UIImageView + Extension.swift */,
+				88C61DB729715DD800C02178 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -570,6 +623,8 @@
 				D0FEA04726EB9B6F00EA2A33 /* ForkyTests */,
 				D0FEA05226EB9B6F00EA2A33 /* ForkyUITests */,
 				D0FEA02F26EB9B6E00EA2A33 /* Products */,
+				79C45B6866DCA047BFEA5DB9 /* Pods */,
+				17BE1E7D43CD1DC3BDE91586 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -659,9 +714,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0FEA05826EB9B6F00EA2A33 /* Build configuration list for PBXNativeTarget "Forky" */;
 			buildPhases = (
+				44894D9B0A7F8FFF4F3C03AC /* [CP] Check Pods Manifest.lock */,
 				D0FEA02A26EB9B6E00EA2A33 /* Sources */,
 				D0FEA02B26EB9B6E00EA2A33 /* Frameworks */,
 				D0FEA02C26EB9B6E00EA2A33 /* Resources */,
+				27B8057244D9E9C9417F6564 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -676,6 +733,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0FEA05B26EB9B6F00EA2A33 /* Build configuration list for PBXNativeTarget "ForkyTests" */;
 			buildPhases = (
+				D76FA7E69CE877E53D0E98CA /* [CP] Check Pods Manifest.lock */,
 				D0FEA04026EB9B6F00EA2A33 /* Sources */,
 				D0FEA04126EB9B6F00EA2A33 /* Frameworks */,
 				D0FEA04226EB9B6F00EA2A33 /* Resources */,
@@ -694,9 +752,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0FEA05E26EB9B6F00EA2A33 /* Build configuration list for PBXNativeTarget "ForkyUITests" */;
 			buildPhases = (
+				EBD0AE6D18EDCB3089DEB392 /* [CP] Check Pods Manifest.lock */,
 				D0FEA04B26EB9B6F00EA2A33 /* Sources */,
 				D0FEA04C26EB9B6F00EA2A33 /* Frameworks */,
 				D0FEA04D26EB9B6F00EA2A33 /* Resources */,
+				6E425C13B7C30B16A7E4B816 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -803,6 +863,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27B8057244D9E9C9417F6564 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Forky/Pods-Forky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Forky/Pods-Forky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Forky/Pods-Forky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44894D9B0A7F8FFF4F3C03AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Forky-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E425C13B7C30B16A7E4B816 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Forky-ForkyUITests/Pods-Forky-ForkyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Forky-ForkyUITests/Pods-Forky-ForkyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Forky-ForkyUITests/Pods-Forky-ForkyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D76FA7E69CE877E53D0E98CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ForkyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBD0AE6D18EDCB3089DEB392 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Forky-ForkyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0FEA02A26EB9B6E00EA2A33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -859,6 +1022,7 @@
 				0147EAE528D600D100DB66CB /* RestoDetailView.swift in Sources */,
 				01B7E64029705A2A003C6442 /* HomeViewModel.swift in Sources */,
 				0154EB6E29707EFF0072FB76 /* StatusCodes.swift in Sources */,
+				88C61DBB297175F900C02178 /* ExpandableLabel.swift in Sources */,
 				0154EB5D29707EEB0072FB76 /* NetworkLayer.swift in Sources */,
 				0154EB7629707EFF0072FB76 /* ParamEncoding.swift in Sources */,
 				01473C7E2959FD07004B1137 /* CellSearchTF.swift in Sources */,
@@ -866,6 +1030,7 @@
 				0154EB5729707EE20072FB76 /* UploadConfiguration.swift in Sources */,
 				D0FEA03226EB9B6E00EA2A33 /* AppDelegate.swift in Sources */,
 				018D085628CA3E3D00A56F5B /* FilterTableView.swift in Sources */,
+				88C61DB829715DD800C02178 /* String+Extension.swift in Sources */,
 				D0FEA03426EB9B6E00EA2A33 /* SceneDelegate.swift in Sources */,
 				D0AD52D72785DDE600CA480B /* CellSavedPostContainer.swift in Sources */,
 				D08B4141270B403200709FAC /* UIView+Extension.swift in Sources */,
@@ -1057,6 +1222,7 @@
 		};
 		D0FEA05926EB9B6F00EA2A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E05B784C8EF2E70CD34835C3 /* Pods-Forky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1081,6 +1247,7 @@
 		};
 		D0FEA05A26EB9B6F00EA2A33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD4382031A627EF446F77686 /* Pods-Forky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1105,6 +1272,7 @@
 		};
 		D0FEA05C26EB9B6F00EA2A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 235456B6B0A0ECE44E68AF05 /* Pods-ForkyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1126,6 +1294,7 @@
 		};
 		D0FEA05D26EB9B6F00EA2A33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D43994BDCDEE08529371A09E /* Pods-ForkyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1147,6 +1316,7 @@
 		};
 		D0FEA05F26EB9B6F00EA2A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDD87FD8A721BEF1E5CD49EC /* Pods-Forky-ForkyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1166,6 +1336,7 @@
 		};
 		D0FEA06026EB9B6F00EA2A33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20434B15CE21A8367D569252 /* Pods-Forky-ForkyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
