@@ -13,7 +13,7 @@ class SearchTableView: UITableView {
     var hSectionFooter:CGFloat = 0.0
     var isScrolltoTop = true
     var callBackSrollTop:((Bool)->Void)?
-    var callBackSlc:(()->Void)?
+    var callBackSlc:((PostDataModel)->Void)?
     var viewModel: SearchViewModel?
     var viewController : UIViewController?
     required init?(coder: NSCoder) {
@@ -121,7 +121,9 @@ extension SearchTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        callBackSlc?()
+        if let data = viewModel?.dataPost?.data?.vendor_posts?[indexPath.row] {
+            callBackSlc?(data)
+        }
     }
  
     func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {

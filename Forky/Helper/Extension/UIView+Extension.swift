@@ -64,13 +64,14 @@ extension UIView {
     
     func addShadow(cornerRadius:CGFloat = 10.0,opacity:Float = 0.25) {
         // Shadow
+        let shadowPath = UIBezierPath(rect: bounds)
         layer.shadowColor = UIColor.black?.cgColor
         layer.shadowOpacity = opacity
         layer.shadowOffset = CGSize(width: 0, height: 1.5)
         layer.shadowRadius = 4.0
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
-        
+        layer.shadowPath = shadowPath.cgPath
         // Corner Radius
         layer.cornerRadius = cornerRadius;
     }

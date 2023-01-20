@@ -33,6 +33,11 @@ class SearchVC: UIViewController {
         txtSearch.enablesReturnKeyAutomatically = true
         txtSearch.delegate = self
         txtSearch.inputAccessoryView = UIView()
+        tableView.callBackSlc = { [weak self] objPostModel in
+            let objPostVC = self?.storyboard?.instantiateViewController(withIdentifier: "PostDetailsVC") as! PostDetailsVC
+            objPostVC.objPostModel = objPostModel
+            self?.navigationController?.pushViewController(objPostVC, animated: true)
+        }
         tableView.register(cellPost.nib, forCellReuseIdentifier: cellPost.identifier)
         tableView.viewController = self
     }

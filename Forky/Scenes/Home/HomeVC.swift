@@ -55,8 +55,10 @@ class HomeVC: UIViewController {
                 }
             }
         }
-        tableView.callBackSlc = { [weak self] in
-            //self?.navigationController?.pushViewController(UIHostingController(rootView: RestoDetailView()), animated: true)
+        tableView.callBackSlc = { [weak self] objPostModel in
+            let objPostVC = self?.storyboard?.instantiateViewController(withIdentifier: "PostDetailsVC") as! PostDetailsVC
+            objPostVC.objPostModel = objPostModel
+            self?.navigationController?.pushViewController(objPostVC, animated: true)
         }
         tableView.viewController = self
         btnFilter.layer.cornerRadius = 4.0
