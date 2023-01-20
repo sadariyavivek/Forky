@@ -35,7 +35,6 @@ class SearchVC: UIViewController {
         txtSearch.inputAccessoryView = UIView()
         tableView.register(cellPost.nib, forCellReuseIdentifier: cellPost.identifier)
         tableView.viewController = self
-        getSeachPostList(query: "")
     }
 
     private func getSeachPostList(query:String?) {

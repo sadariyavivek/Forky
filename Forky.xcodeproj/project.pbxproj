@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -440,7 +440,6 @@
 				235456B6B0A0ECE44E68AF05 /* Pods-ForkyTests.debug.xcconfig */,
 				D43994BDCDEE08529371A09E /* Pods-ForkyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1228,7 +1227,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = A25R38QM35;
 				INFOPLIST_FILE = Forky/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1253,7 +1252,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vivekkumar Sadariya (A25R38QM35)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = A25R38QM35;
 				INFOPLIST_FILE = Forky/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
