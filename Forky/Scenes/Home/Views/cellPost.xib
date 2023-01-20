@@ -99,7 +99,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQU-GK-YnN">
-                                <rect key="frame" x="0.0" y="64" width="320" height="343"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="332"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="n0f-OI-uz3">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
@@ -114,11 +114,11 @@
                                     <constraint firstItem="n0f-OI-uz3" firstAttribute="leading" secondItem="xQU-GK-YnN" secondAttribute="leading" id="LzR-iV-SYp"/>
                                     <constraint firstAttribute="trailing" secondItem="n0f-OI-uz3" secondAttribute="trailing" id="V1a-g7-Cwt"/>
                                     <constraint firstItem="n0f-OI-uz3" firstAttribute="top" secondItem="xQU-GK-YnN" secondAttribute="top" id="l9H-Wi-m0s"/>
-                                    <constraint firstAttribute="bottom" secondItem="n0f-OI-uz3" secondAttribute="bottom" constant="23" id="yIo-Ra-s0H"/>
+                                    <constraint firstAttribute="bottom" secondItem="n0f-OI-uz3" secondAttribute="bottom" constant="12" id="yIo-Ra-s0H"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svV-Vj-DLx">
-                                <rect key="frame" x="0.0" y="407" width="320" height="20"/>
+                                <rect key="frame" x="0.0" y="396" width="320" height="20"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik7-U8-IY7">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="20"/>
@@ -178,14 +178,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cha-Ld-ZYQ">
-                                <rect key="frame" x="0.0" y="427" width="320" height="14"/>
+                                <rect key="frame" x="0.0" y="416" width="320" height="14"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="w44-t9-FJG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-ie-7OV">
-                                <rect key="frame" x="0.0" y="441" width="320" height="127"/>
+                                <rect key="frame" x="0.0" y="430" width="320" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Test Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMv-Uc-FQm">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
@@ -203,14 +203,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyB-da-b9b">
-                                <rect key="frame" x="0.0" y="568" width="320" height="8"/>
+                                <rect key="frame" x="0.0" y="557" width="320" height="8"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="D40-8S-PHx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZx-z0-cSG">
-                                <rect key="frame" x="0.0" y="576" width="320" height="58"/>
+                                <rect key="frame" x="0.0" y="565" width="320" height="69"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Don't miss #strikingsaturday with @itsdsmuskan! Join the fun at Mokachi Cafe. We're following ...Read More" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxn-Rd-bYi" customClass="ExpandableLabel" customModule="Forky" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
@@ -221,7 +221,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="yxn-Rd-bYi" secondAttribute="bottom" id="Cld-v5-0mN"/>
+                                    <constraint firstAttribute="bottom" secondItem="yxn-Rd-bYi" secondAttribute="bottom" constant="15" id="Cld-v5-0mN"/>
                                     <constraint firstItem="yxn-Rd-bYi" firstAttribute="leading" secondItem="gZx-z0-cSG" secondAttribute="leading" id="HYH-mB-ZNY"/>
                                     <constraint firstAttribute="trailing" secondItem="yxn-Rd-bYi" secondAttribute="trailing" id="WH1-Ma-JZr"/>
                                     <constraint firstItem="yxn-Rd-bYi" firstAttribute="top" secondItem="gZx-z0-cSG" secondAttribute="top" id="qbu-sw-4eJ"/>

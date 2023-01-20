@@ -20,14 +20,14 @@ extension String {
         return htmlToAttributedString?.string ?? ""
     }
     
-    func convertDateFormat(withFormat format: String = "yyyy-MM-dd") -> String? {
+    func convertDateFormat(withFormat fromFormat: String = "yyyy-MM-dd", toFormat : String = "dd MMM") -> String? {
 
          let dateFormatter = DateFormatter()
-         dateFormatter.dateFormat = format
+         dateFormatter.dateFormat = fromFormat
         // dateFormatter.timeZone = TimeZone(name: "UTC")
         if let date = dateFormatter.date(from: self) {
             let convertDateFormatter = DateFormatter()
-            convertDateFormatter.dateFormat = "dd MMM"
+            convertDateFormatter.dateFormat = toFormat
             return convertDateFormatter.string(from: date)
         }
         return nil

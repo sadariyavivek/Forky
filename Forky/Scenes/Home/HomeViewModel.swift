@@ -146,5 +146,5 @@ struct PostDataModel: Decodable {
 }
 
 struct VenderDataModel: Decodable {
-    var business_name, address_line_1,latitude,longitude,primary_contact,logo: String?
+    var business_name, address_line_1,address_line_2,latitude,longitude,primary_contact,logo: String?
 }
